@@ -1,5 +1,5 @@
 <!-- .slide: data-background="./images/superman.jpg" data-background-opacity="0.5"-->
-# FP SUPERPOWERS IN PRACTICE
+# FP Superpowers In Practice
 
 <small>Lambda Cologne, November 11th, 2019</small>
 
@@ -57,10 +57,7 @@ The core types
 
 ```haskell
 type Dur = Rational
-```
-|fr
 
-```haskell
 data Primitive a
   = Note Dur a
   | Rest Dur
@@ -88,17 +85,18 @@ line :: [Music a] -> Music a -- sequence of notes
 |fr
 
 ```haskell
+hn :: Dur -- half note
 qn :: Dur -- quarter note
 en :: Dur -- eighth note
+sn :: Dur -- sixteenth note
+
+dqn :: Dur -- dotted quarter note
 ```
 |fr
 
 ```haskell
 type Octave = Int
-```
-|fr
 
-```haskell
 c :: Octave -> Dur -> Music Pitch -- ctor for a C
 fs :: Octave -> Dur -> Music Pitch -- ctor for an F♯
 bf :: Octave -> Dur -> Music Pitch -- ctor for a B♭
@@ -124,16 +122,17 @@ music = c 4 qn :+: d 4 qn :+: e 4 hn
 Can we transpose the melody?
 
 ```haskell
+music2 = transpose 7 music
+```
+
+<img src="/images/notes_transposed.png" width=70% style="border:0;"> |fr
+
+
+```haskell
 transpose :: Int -> Music Pitch -> Music Pitch
 transpose = ???
 ```
-
-```haskell
-music2 = transpose 7 music
-```
 |fr
-
-<img src="/images/notes_transposed.png" width=70% style="border:0;"> |fr
 
 ---
 
@@ -475,7 +474,7 @@ Add-to-cart rate .............. = 6.25
 
 <span style="color:lightblue">Summary</span>
 
-- Monoids are great for combining values|fr
+- Great for combining values|fr
 - Highly composable|fr
 - Easy to parallelize|fr
 
@@ -504,6 +503,14 @@ Problems with (forms) validation
 notes:
 
 - At least if you are doing it wrong
+
+---
+
+## Applicatives
+
+Demo
+
+<iframe src="https://fp-superpowers-forms-elm.surge.sh/" width=1000 height=450 frameborder="0"></iframe>
 
 ---
 
@@ -570,7 +577,9 @@ data UnvalidatedForm = UnvalidatedForm
 
 ## Applicatives
 
-A type for validation
+<span style="color:lightblue">Validation library</span>
+
+A type for validation|fr1
 
 ```haskell
 data Validation err a
@@ -601,7 +610,9 @@ notes:
 
 ## Applicatives
 
-What can go wrong?
+<span style="color:lightblue">Validation logic</span>
+
+What can go wrong?|fr1
 
 ```haskell
 data Error
@@ -733,14 +744,11 @@ Putting it all together
 ```haskell
 formValidation :: UnvalidatedForm -> FormValidation MediaUpload
 formValidation form =
-  let media = case validateMediaType (mediaType form) of
-        Success TypeImage ->
-          validateImage (imageUrl form)
-        Success TypeVideo ->
-          validateVideo (videoUrl form) (videoText form)
-        Failure e ->
-          Failure e
-  in  MediaUpload <$> validateUsername (username form) <*> media
+ let media = case validateMediaType (mediaType form) of
+      Success TypeImage -> validateImage (imageUrl form)
+      Success TypeVideo -> validateVideo (videoUrl form) (videoText form)
+      Failure e -> Failure e
+ in  MediaUpload <$> validateUsername (username form) <*> media
 ```  
 |fr
 
