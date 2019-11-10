@@ -1,0 +1,7 @@
+Configuring regex-tdfa-text-1.0.0.3...
+Preprocessing library for regex-tdfa-text-1.0.0.3..
+Building library for regex-tdfa-text-1.0.0.3..
+[1 of 2] Compiling Text.Regex.TDFA.Text ( Text/Regex/TDFA/Text.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Text/Regex/TDFA/Text.o )
+[2 of 2] Compiling Text.Regex.TDFA.Text.Lazy ( Text/Regex/TDFA/Text/Lazy.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Text/Regex/TDFA/Text/Lazy.o )
+Installing library in /Users/leif/.stack/snapshots/x86_64-osx/lts-14.13/8.6.5/lib/x86_64-osx-ghc-8.6.5/regex-tdfa-text-1.0.0.3-EzL9suZZtKXCNFfm2WKYmB
+Registering library for regex-tdfa-text-1.0.0.3..

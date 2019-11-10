@@ -1,0 +1,2476 @@
+
+==================== FINAL INTERFACE ====================
+2019-11-09 21:11:47.033229 UTC
+
+interface main:Main 8065
+  interface hash: d2a9c981df5dd715ac0d5d690bf361f7
+  ABI hash: 0454f8168871d1e11fd99ac1bf70b921
+  export-list hash: 85963aae71245af430083fb84a137019
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 15f93cd4c820153a6114c17e4b7ada48
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.alphaNum
+  Main.formValidation
+  Main.invalid
+  Main.isUrl
+  Main.main
+  Main.minLength
+  Main.validateImage
+  Main.validateMediaType
+  Main.validateUsername
+  Main.validateVideo
+  Main.validateVideoText
+  Main.validateVideoUrl
+  Main.Error{Main.InvalidImageUrl Main.InvalidMediaType Main.InvalidVideoUrl Main.UsernameHasInvalidChars Main.UsernameTooShort Main.VideoTextEmpty}
+  Main.FormValidation
+  Main.Image{Main.Image}
+  Main.ImageUrl{Main.ImageUrl}
+  Main.Media{Main.Img Main.Vid}
+  Main.MediaType{Main.TypeImage Main.TypeVideo}
+  Main.MediaUpload{Main.MediaUpload media name}
+  Main.UnvalidatedForm{Main.UnvalidatedForm imageUrl mediaType username videoText videoUrl}
+  Main.Username{Main.Username}
+  Main.Video{Main.Video text url}
+  Main.VideoText{Main.VideoText}
+  Main.VideoUrl{Main.VideoUrl}
+module dependencies:
+package dependencies: StateVar-1.2 adjunctions-4.4 array-0.5.3.0
+                      base-4.12.0.0 base-orphans-0.8.1 bifunctors-5.5.5 binary-0.8.6.0
+                      bytestring-0.10.8.2 call-stack-0.1.0 comonad-5.0.5
+                      containers-0.6.0.1 contravariant-1.5.2 deepseq-1.4.4.0
+                      distributive-0.6.1 exceptions-0.10.3 free-5.1.2 ghc-boot-th-8.6.5
+                      ghc-prim-0.5.3 hashable-1.2.7.0 integer-gmp-1.0.2.0
+                      kan-extensions-5.2 lens-4.17.1 mtl-2.2.2 parsec-3.1.14.0
+                      pretty-1.1.3.6 primitive-0.6.4.0 profunctors-5.3 reflection-2.1.5
+                      regex-base-0.93.2 regex-tdfa-1.2.3.2 semigroupoids-5.3.3
+                      stm-2.5.0.0 tagged-0.8.6 template-haskell-2.14.0.0 text-1.2.3.1
+                      th-abstraction-0.3.1.0 transformers-0.5.6.2
+                      transformers-base-0.4.5.2 transformers-compat-0.6.5
+                      unordered-containers-0.2.10.0 validation-1.1 vector-0.12.0.3
+orphans: reflection-2.1.5:Data.Reflection
+         vector-0.12.0.3:Data.Vector.Unboxed
+         vector-0.12.0.3:Data.Vector.Fusion.Bundle
+         stm-2.5.0.0:Control.Monad.STM
+         hashable-1.2.7.0:Data.Hashable.Generic
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.ByteString
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.ByteString.Lazy
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.Sequence
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.String
+         text-1.2.3.1:Data.Text.Lazy text-1.2.3.1:Data.Text
+         binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show
+         transformers-0.5.6.2:Control.Monad.Trans.Error
+         regex-base-0.93.2:Text.Regex.Base.Context base-4.12.0.0:GHC.Float
+         base-4.12.0.0:GHC.Base
+family instance modules: adjunctions-4.4:Data.Functor.Rep
+                         base-4.12.0.0:Control.Applicative base-4.12.0.0:Data.Complex
+                         base-4.12.0.0:Data.Functor.Compose base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         bifunctors-5.5.5:Data.Bifunctor.Biff
+                         bifunctors-5.5.5:Data.Bifunctor.Clown
+                         bifunctors-5.5.5:Data.Bifunctor.Fix
+                         bifunctors-5.5.5:Data.Bifunctor.Flip
+                         bifunctors-5.5.5:Data.Bifunctor.Join
+                         bifunctors-5.5.5:Data.Bifunctor.Joker
+                         bifunctors-5.5.5:Data.Bifunctor.Product
+                         bifunctors-5.5.5:Data.Bifunctor.Sum
+                         bifunctors-5.5.5:Data.Bifunctor.Tannen
+                         bifunctors-5.5.5:Data.Bifunctor.Wrapped
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         free-5.1.2:Control.Comonad.Cofree
+                         free-5.1.2:Control.Comonad.Trans.Cofree
+                         free-5.1.2:Control.Monad.Free free-5.1.2:Control.Monad.Trans.Free
+                         ghc-boot-th-8.6.5:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.6.5:GHC.LanguageExtensions.Type
+                         kan-extensions-5.2:Data.Functor.Day
+                         kan-extensions-5.2:Data.Functor.Yoneda lens-4.17.1:Control.Lens.At
+                         lens-4.17.1:Control.Lens.Internal.Indexed
+                         lens-4.17.1:Control.Lens.Reified lens-4.17.1:Control.Lens.Tuple
+                         lens-4.17.1:Control.Lens.Wrapped lens-4.17.1:Control.Lens.Zoom
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.Array
+                         primitive-0.6.4.0:Data.Primitive.ByteArray
+                         primitive-0.6.4.0:Data.Primitive.PrimArray
+                         primitive-0.6.4.0:Data.Primitive.SmallArray
+                         primitive-0.6.4.0:Data.Primitive.UnliftedArray
+                         profunctors-5.3:Data.Profunctor.Composition
+                         profunctors-5.3:Data.Profunctor.Rep tagged-0.8.6:Data.Tagged
+                         template-haskell-2.14.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+                         th-abstraction-0.3.1.0:Language.Haskell.TH.Datatype
+                         unordered-containers-0.2.10.0:Data.HashMap.Base
+                         unordered-containers-0.2.10.0:Data.HashSet.Base
+                         validation-1.1:Data.Validation vector-0.12.0.3:Data.Vector
+                         vector-0.12.0.3:Data.Vector.Primitive
+                         vector-0.12.0.3:Data.Vector.Storable
+                         vector-0.12.0.3:Data.Vector.Unboxed
+                         vector-0.12.0.3:Data.Vector.Unboxed.Base
+import  -/  base-4.12.0.0:Data.Char 74f67fe9150a102afa18766e840f6832
+import  -/  base-4.12.0.0:Data.Foldable efb37371da929e7bc88d896298d2d979
+import  -/  base-4.12.0.0:Data.Functor 069b2025a03e32fd228e74a86a58a075
+import  -/  base-4.12.0.0:Data.List.NonEmpty 3890a1d01d63ccdc85bc9c9f8969a7cd
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.Show 838a5d039379d82d9626aae53dfce276
+import  -/  base-4.12.0.0:GHC.Unicode 87726eb81a3f9c9b22160a0afd5dc56a
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  base-4.12.0.0:System.IO c961e5ee6731c0683a6e879272c9e9f6
+import  -/  ghc-prim-0.5.3:GHC.Classes 0f6fd7d7db53fc48f6e1f01803cc6c9d
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+import  -/  regex-tdfa-1.2.3.2:Text.Regex.TDFA 3116339e308640eb5305cd21d0a9ec20
+import  -/  validation-1.1:Data.Validation d409c83d91a535db71fb31b497c31f57
+b0fed619f79a571e798d238ddde79140
+  $fShowError :: GHC.Show.Show Main.Error
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Error
+                  Main.$fShowError_$cshowsPrec
+                  Main.$fShowError_$cshow
+                  Main.$fShowError_$cshowList -}
+12824a4f76b382b7569c72f3f480a20f
+  $fShowError1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fShowError2) -}
+adb872232a4b41ea37f90978ad02075d
+  $fShowError10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UsernameHasInvalidChars"#) -}
+1a25304056db6f85f116de4dc71315b3
+  $fShowError11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fShowError12) -}
+546b59c7f08e38871dccd3278d836d33
+  $fShowError12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("VideoTextEmpty"#) -}
+69a5358daa8151f22a28ce28d548f34e
+  $fShowError2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("InvalidMediaType"#) -}
+d6320b7faa33adb41df3d5387f546be9
+  $fShowError3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fShowError4) -}
+b680ddf0787c6f2cda06e041d1a0de17
+  $fShowError4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("InvalidVideoUrl"#) -}
+d2c4ea83347f5f94279bb59b1bc5db12
+  $fShowError5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fShowError6) -}
+e680b9ed2523ab8393c82827a88d4a36
+  $fShowError6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("InvalidImageUrl"#) -}
+ed0185a794bed9277dc33f51e2603059
+  $fShowError7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fShowError8) -}
+c8372ac12c6eb1a35e7f74259d4e67b9
+  $fShowError8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UsernameTooShort"#) -}
+a0ad7e0ad4efd7b364e23ed8e58503f3
+  $fShowError9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fShowError10) -}
+b0fed619f79a571e798d238ddde79140
+  $fShowError_$cshow :: Main.Error -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Main.Error) ->
+                 case x of wild {
+                   Main.VideoTextEmpty -> Main.$fShowError11
+                   Main.UsernameHasInvalidChars -> Main.$fShowError9
+                   Main.UsernameTooShort -> Main.$fShowError7
+                   Main.InvalidImageUrl -> Main.$fShowError5
+                   Main.InvalidVideoUrl -> Main.$fShowError3
+                   Main.InvalidMediaType -> Main.$fShowError1 }) -}
+b0fed619f79a571e798d238ddde79140
+  $fShowError_$cshowList :: [Main.Error] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Main.Error]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Main.Error Main.$w$cshowsPrec ls s) -}
+b0fed619f79a571e798d238ddde79140
+  $fShowError_$cshowsPrec ::
+    GHC.Types.Int -> Main.Error -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: [2],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Main.Error)
+                   (w2 :: GHC.Base.String) ->
+                 Main.$w$cshowsPrec w1 w2) -}
+ec944ddbf23ed8e54f842f7e022b4830
+  $fShowImage :: GHC.Show.Show Main.Image
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Image
+                  Main.$fShowImage_$cshowsPrec
+                  Main.$fShowImage_$cshow
+                  Main.$fShowImage_$cshowList -}
+ec944ddbf23ed8e54f842f7e022b4830
+  $fShowImage1 :: Main.Image -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,1*U><L,U>,
+     Unfolding: (\ (w :: Main.Image) (w1 :: GHC.Base.String) ->
+                 Main.$w$cshowsPrec1 0# w w1) -}
+e5734c997f93f4be0a9b67b3e494c37d
+  $fShowImage2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("ImageUrl "#) -}
+2e09955dc14acfccfc96687b4930f6b0
+  $fShowImage3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fShowImage4) -}
+41ccbb7133cdf53958860cbab3849181
+  $fShowImage4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Image "#) -}
+3a8059aa5b25064b3b4ff85fbea671b5
+  $fShowImage5 :: [GHC.Types.Char]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   Main.$fShowImage6) -}
+9852b16f9db8740f149c9afac7be9103
+  $fShowImage6 :: [GHC.Types.Char]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)2
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+d8edf540005c88e78823f62ccf66f88c
+  $fShowImageUrl :: GHC.Show.Show Main.ImageUrl
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.ImageUrl
+                  Main.$fShowImageUrl_$cshowsPrec
+                  Main.$fShowImageUrl_$cshow
+                  Main.$fShowImageUrl_$cshowList -}
+d8edf540005c88e78823f62ccf66f88c
+  $fShowImageUrl1 :: Main.ImageUrl -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,1*U><L,U>,
+     Unfolding: (\ (w :: Main.ImageUrl) (w1 :: GHC.Base.String) ->
+                 Main.$w$cshowsPrec2 0# w w1) -}
+36d4e1ccd3ff74ebc751c31fd6221a99
+  $fShowImageUrl2 :: [GHC.Types.Char]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+d8edf540005c88e78823f62ccf66f88c
+  $fShowImageUrl_$cshow :: Main.ImageUrl -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: Main.ImageUrl) ->
+                 GHC.CString.unpackAppendCString#
+                   Main.$fShowImage2
+                   (GHC.Types.:
+                      @ GHC.Types.Char
+                      GHC.Show.$fShow(,)3
+                      (GHC.Show.showLitString
+                         x `cast` (Main.N:ImageUrl[0])
+                         Main.$fShowImageUrl2))) -}
+d8edf540005c88e78823f62ccf66f88c
+  $fShowImageUrl_$cshowList :: [Main.ImageUrl] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Main.ImageUrl]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Main.ImageUrl Main.$fShowImageUrl1 ls s) -}
+d8edf540005c88e78823f62ccf66f88c
+  $fShowImageUrl_$cshowsPrec ::
+    GHC.Types.Int -> Main.ImageUrl -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,1*U><L,U>, Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Main.ImageUrl)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Main.$w$cshowsPrec2 ww1 w1 w2 }) -}
+ec944ddbf23ed8e54f842f7e022b4830
+  $fShowImage_$cshow :: Main.Image -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: Main.Image) ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   Main.$fShowImage3
+                   (GHC.Types.:
+                      @ GHC.Types.Char
+                      GHC.Show.$fShow(,)4
+                      (GHC.CString.unpackAppendCString#
+                         Main.$fShowImage2
+                         (GHC.Types.:
+                            @ GHC.Types.Char
+                            GHC.Show.$fShow(,)3
+                            (GHC.Show.showLitString
+                               x `cast` (Main.N:Image[0] ; Main.N:ImageUrl[0])
+                               Main.$fShowImage5))))) -}
+ec944ddbf23ed8e54f842f7e022b4830
+  $fShowImage_$cshowList :: [Main.Image] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Main.Image]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Main.Image Main.$fShowImage1 ls s) -}
+ec944ddbf23ed8e54f842f7e022b4830
+  $fShowImage_$cshowsPrec ::
+    GHC.Types.Int -> Main.Image -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,1*U><L,U>, Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Main.Image)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Main.$w$cshowsPrec1 ww1 w1 w2 }) -}
+fe3ed2fa00f1ec769f618c79c2eb52af
+  $fShowMedia :: GHC.Show.Show Main.Media
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Media
+                  Main.$fShowMedia_$cshowsPrec
+                  Main.$fShowMedia_$cshow
+                  Main.$fShowMedia_$cshowList -}
+fe3ed2fa00f1ec769f618c79c2eb52af
+  $fShowMedia1 :: Main.Media -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (w :: Main.Media) (w1 :: GHC.Base.String) ->
+                 Main.$w$cshowsPrec3 0# w w1) -}
+ffc038af5aef9c85089365b39d4a0f93
+  $fShowMedia10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fShowMedia11) -}
+46981cb61c1e6603f998ed8f73473c41
+  $fShowMedia11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Img "#) -}
+9a43d314e90a43797c1df84531f965b5
+  $fShowMedia12 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   Main.$fShowMedia13) -}
+006ece13b5ded4fa45a45bc677e78d2d
+  $fShowMedia13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   Main.$fShowMedia2
+                   Main.$fShowImage6) -}
+62e1878f60fa0adb31528cecd9fbcd5f
+  $fShowMedia14 :: [GHC.Types.Char]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   Main.$fShowMedia15) -}
+364bdd1fda09e599efb780fe4b924db7
+  $fShowMedia15 :: [GHC.Types.Char]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)2
+                   Main.$fShowImage6) -}
+35d5ec70e331e533c9c9fafa8d51c665
+  $fShowMedia2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("}"#) -}
+473d94b2452a286f7c1d36724af065ae
+  $fShowMedia3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("VideoText "#) -}
+970310255577357224a437db995950b7
+  $fShowMedia4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("text = "#) -}
+06b2c4a198644fbcc38c19affdc122ee
+  $fShowMedia5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("VideoUrl "#) -}
+34d089615afba89c769f169bc6b3d43f
+  $fShowMedia6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("url = "#) -}
+2f6cf7888b11b37bf0feb219e73daef8
+  $fShowMedia7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Video {"#) -}
+e1486d4c5a590920330ecb7b0e31d14e
+  $fShowMedia8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fShowMedia9) -}
+b4a3ca0a98d2b67d6f5e60212882d90f
+  $fShowMedia9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Vid "#) -}
+924a9b1667fe168bf4ab2a37d58d62e0
+  $fShowMediaType :: GHC.Show.Show Main.MediaType
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.MediaType
+                  Main.$fShowMediaType_$cshowsPrec
+                  Main.$fShowMediaType_$cshow
+                  Main.$fShowMediaType_$cshowList -}
+924a9b1667fe168bf4ab2a37d58d62e0
+  $fShowMediaType1 :: Main.MediaType -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: Main.MediaType) (eta :: GHC.Base.String) ->
+                 case ds of wild {
+                   Main.TypeImage
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b
+                           (c :: GHC.Types.Char -> b -> b)[OneShot]
+                           (n :: b)[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n Main.$fShowMediaType4)
+                        eta
+                   Main.TypeVideo
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b
+                           (c :: GHC.Types.Char -> b -> b)[OneShot]
+                           (n :: b)[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n Main.$fShowMediaType2)
+                        eta }) -}
+eae935d8385dc5876451a91f314469a5
+  $fShowMediaType2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fShowMediaType3) -}
+5f6e80dce32c24e754a797b53d58b783
+  $fShowMediaType3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("TypeVideo"#) -}
+abef57ea24b831fcb6e0fb2dd1056c2e
+  $fShowMediaType4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fShowMediaType5) -}
+aa05f0b91999ba1409a8a835678f6adc
+  $fShowMediaType5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("TypeImage"#) -}
+924a9b1667fe168bf4ab2a37d58d62e0
+  $fShowMediaType_$cshow :: Main.MediaType -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Main.MediaType) ->
+                 case x of wild {
+                   Main.TypeImage -> Main.$fShowMediaType4
+                   Main.TypeVideo -> Main.$fShowMediaType2 }) -}
+924a9b1667fe168bf4ab2a37d58d62e0
+  $fShowMediaType_$cshowList :: [Main.MediaType] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Main.MediaType]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Main.MediaType Main.$fShowMediaType1 ls s) -}
+924a9b1667fe168bf4ab2a37d58d62e0
+  $fShowMediaType_$cshowsPrec ::
+    GHC.Types.Int -> Main.MediaType -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (ds1 :: Main.MediaType)
+                   (eta :: GHC.Base.String) ->
+                 case ds1 of wild {
+                   Main.TypeImage
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b
+                           (c :: GHC.Types.Char -> b -> b)[OneShot]
+                           (n :: b)[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n Main.$fShowMediaType4)
+                        eta
+                   Main.TypeVideo
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b
+                           (c :: GHC.Types.Char -> b -> b)[OneShot]
+                           (n :: b)[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n Main.$fShowMediaType2)
+                        eta }) -}
+f3e796832f8c60877c92f58561007816
+  $fShowMediaUpload :: GHC.Show.Show Main.MediaUpload
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.MediaUpload
+                  Main.$fShowMediaUpload_$cshowsPrec
+                  Main.$fShowMediaUpload_$cshow
+                  Main.$fShowMediaUpload_$cshowList -}
+f3e796832f8c60877c92f58561007816
+  $fShowMediaUpload1 :: Main.MediaUpload -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(1*U,1*U)><L,U>,
+     Unfolding: (\ (w :: Main.MediaUpload) (w1 :: GHC.Base.String) ->
+                 case w of ww { Main.MediaUpload ww1 ww2 ->
+                 Main.$w$cshowsPrec7 0# ww1 ww2 w1 }) -}
+64c96b82a98b72307da7db19ed2c168d
+  $fShowMediaUpload10 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   Main.$fShowMediaUpload11) -}
+7e4ae8e465eca1a00ca0ee753f1719db
+  $fShowMediaUpload11 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)2
+                   Main.$fShowMediaUpload8) -}
+b9917b5092f99a5b7250b194cf27b778
+  $fShowMediaUpload2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("media = "#) -}
+e0c99e49e10d46acf977c0ac8e60d1ed
+  $fShowMediaUpload3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Username "#) -}
+ba5aec2fac4b7cf249b2d0e13385cb3b
+  $fShowMediaUpload4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("name = "#) -}
+5fa63c8737e9cf09769ed1b7a3257857
+  $fShowMediaUpload5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("MediaUpload {"#) -}
+c7d993ef45a0869269562611b092a6bd
+  $fShowMediaUpload6 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   Main.$fShowMediaUpload7) -}
+03f288db74de5b05567ee17860da6928
+  $fShowMediaUpload7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   Main.$fShowMedia2
+                   Main.$fShowMediaUpload8) -}
+52a65a93dd8fcdd59efb72d2595c2765
+  $fShowMediaUpload8 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)2
+                   Main.$fShowMediaUpload9) -}
+f9c9f7c25116f16f4a22d49cc870b293
+  $fShowMediaUpload9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$fShowMedia2) -}
+f3e796832f8c60877c92f58561007816
+  $fShowMediaUpload_$cshow :: Main.MediaUpload -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Main.MediaUpload) ->
+                 case w of ww { Main.MediaUpload ww1 ww2 ->
+                 Main.$w$cshow ww1 ww2 }) -}
+f3e796832f8c60877c92f58561007816
+  $fShowMediaUpload_$cshowList ::
+    [Main.MediaUpload] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Main.MediaUpload]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ Main.MediaUpload
+                   Main.$fShowMediaUpload1
+                   ls
+                   s) -}
+f3e796832f8c60877c92f58561007816
+  $fShowMediaUpload_$cshowsPrec ::
+    GHC.Types.Int -> Main.MediaUpload -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Main.MediaUpload)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Main.MediaUpload ww3 ww4 ->
+                 Main.$w$cshowsPrec7 ww1 ww3 ww4 w2 } }) -}
+fe3ed2fa00f1ec769f618c79c2eb52af
+  $fShowMedia_$cshow :: Main.Media -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: Main.Media) ->
+                 case x of wild {
+                   Main.Img b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Main.$fShowMedia10
+                        (GHC.Types.:
+                           @ GHC.Types.Char
+                           GHC.Show.$fShow(,)4
+                           (GHC.Base.++
+                              @ GHC.Types.Char
+                              Main.$fShowImage3
+                              (GHC.Types.:
+                                 @ GHC.Types.Char
+                                 GHC.Show.$fShow(,)4
+                                 (GHC.CString.unpackAppendCString#
+                                    Main.$fShowImage2
+                                    (GHC.Types.:
+                                       @ GHC.Types.Char
+                                       GHC.Show.$fShow(,)3
+                                       (GHC.Show.showLitString
+                                          b1 `cast` (Main.N:Image[0] ; Main.N:ImageUrl[0])
+                                          Main.$fShowMedia14))))))
+                   Main.Vid b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Main.$fShowMedia8
+                        (case b1 of wild1 { Main.Video b2 b3 ->
+                         GHC.Types.:
+                           @ GHC.Types.Char
+                           GHC.Show.$fShow(,)4
+                           (GHC.CString.unpackAppendCString#
+                              Main.$fShowMedia7
+                              (GHC.CString.unpackAppendCString#
+                                 Main.$fShowMedia6
+                                 (GHC.CString.unpackAppendCString#
+                                    Main.$fShowMedia5
+                                    (GHC.Types.:
+                                       @ GHC.Types.Char
+                                       GHC.Show.$fShow(,)3
+                                       (GHC.Show.showLitString
+                                          b2 `cast` (Main.N:VideoUrl[0])
+                                          (GHC.Types.:
+                                             @ GHC.Types.Char
+                                             GHC.Show.$fShow(,)3
+                                             (GHC.Base.++
+                                                @ GHC.Types.Char
+                                                GHC.Show.showCommaSpace1
+                                                (GHC.CString.unpackAppendCString#
+                                                   Main.$fShowMedia4
+                                                   (GHC.CString.unpackAppendCString#
+                                                      Main.$fShowMedia3
+                                                      (GHC.Types.:
+                                                         @ GHC.Types.Char
+                                                         GHC.Show.$fShow(,)3
+                                                         (GHC.Show.showLitString
+                                                            b3 `cast` (Main.N:VideoText[0])
+                                                            Main.$fShowMedia12))))))))))) }) }) -}
+fe3ed2fa00f1ec769f618c79c2eb52af
+  $fShowMedia_$cshowList :: [Main.Media] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Main.Media]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Main.Media Main.$fShowMedia1 ls s) -}
+fe3ed2fa00f1ec769f618c79c2eb52af
+  $fShowMedia_$cshowsPrec ::
+    GHC.Types.Int -> Main.Media -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U><L,U>, Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Main.Media)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Main.$w$cshowsPrec3 ww1 w1 w2 }) -}
+252626cd77b58e2cda89e358f639e237
+  $fShowUnvalidatedForm :: GHC.Show.Show Main.UnvalidatedForm
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.UnvalidatedForm
+                  Main.$fShowUnvalidatedForm_$cshowsPrec
+                  Main.$fShowUnvalidatedForm_$cshow
+                  Main.$fShowUnvalidatedForm_$cshowList -}
+252626cd77b58e2cda89e358f639e237
+  $fShowUnvalidatedForm1 :: Main.UnvalidatedForm -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(1*U,1*U,1*U,1*U,1*U)><L,U>,
+     Unfolding: (\ (w :: Main.UnvalidatedForm)
+                   (w1 :: GHC.Base.String) ->
+                 case w of ww { Main.UnvalidatedForm ww1 ww2 ww3 ww4 ww5 ->
+                 Main.$w$cshowsPrec9 0# ww1 ww2 ww3 ww4 ww5 w1 }) -}
+3f63d89963d98e90f3581c9b2d8e2f78
+  $fShowUnvalidatedForm2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Main.$fShowUnvalidatedForm3) -}
+425b2669153d684deade80aa271598ef
+  $fShowUnvalidatedForm3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UnvalidatedForm {"#) -}
+d71600645a2ba149040f0824ac8d3f6c
+  $fShowUnvalidatedForm4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("imageUrl = "#) -}
+894d9ce1834b4e2bc3895fd97cad9937
+  $fShowUnvalidatedForm5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("videoText = "#) -}
+262b50f37cc5616cbe0f6b67a24c100a
+  $fShowUnvalidatedForm6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("videoUrl = "#) -}
+c816c41286ddb8f440580f7d6acd2824
+  $fShowUnvalidatedForm7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("mediaType = "#) -}
+20466b7708744811248034c9173ca032
+  $fShowUnvalidatedForm8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("username = "#) -}
+25117ad5d793a09c93da4cd72af777e6
+  $fShowUnvalidatedForm9 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+252626cd77b58e2cda89e358f639e237
+  $fShowUnvalidatedForm_$cshow ::
+    Main.UnvalidatedForm -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U,1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Main.UnvalidatedForm) ->
+                 Main.$fShowUnvalidatedForm_$cshowsPrec
+                   Main.$fShowUnvalidatedForm9
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+252626cd77b58e2cda89e358f639e237
+  $fShowUnvalidatedForm_$cshowList ::
+    [Main.UnvalidatedForm] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Main.UnvalidatedForm]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ Main.UnvalidatedForm
+                   Main.$fShowUnvalidatedForm1
+                   ls
+                   s) -}
+252626cd77b58e2cda89e358f639e237
+  $fShowUnvalidatedForm_$cshowsPrec ::
+    GHC.Types.Int -> Main.UnvalidatedForm -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U,1*U,1*U,1*U)><L,U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Main.UnvalidatedForm)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Main.UnvalidatedForm ww3 ww4 ww5 ww6 ww7 ->
+                 Main.$w$cshowsPrec9 ww1 ww3 ww4 ww5 ww6 ww7 w2 } }) -}
+c28084e6215408a7b9cd0514e4cb0574
+  $fShowUsername :: GHC.Show.Show Main.Username
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Username
+                  Main.$fShowUsername_$cshowsPrec
+                  Main.$fShowUsername_$cshow
+                  Main.$fShowUsername_$cshowList -}
+c28084e6215408a7b9cd0514e4cb0574
+  $fShowUsername1 :: Main.Username -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,1*U><L,U>,
+     Unfolding: (\ (w :: Main.Username) (w1 :: GHC.Base.String) ->
+                 Main.$w$cshowsPrec8 0# w w1) -}
+c28084e6215408a7b9cd0514e4cb0574
+  $fShowUsername_$cshow :: Main.Username -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: Main.Username) ->
+                 GHC.CString.unpackAppendCString#
+                   Main.$fShowMediaUpload3
+                   (GHC.Types.:
+                      @ GHC.Types.Char
+                      GHC.Show.$fShow(,)3
+                      (GHC.Show.showLitString
+                         x `cast` (Main.N:Username[0])
+                         Main.$fShowImageUrl2))) -}
+c28084e6215408a7b9cd0514e4cb0574
+  $fShowUsername_$cshowList :: [Main.Username] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Main.Username]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Main.Username Main.$fShowUsername1 ls s) -}
+c28084e6215408a7b9cd0514e4cb0574
+  $fShowUsername_$cshowsPrec ::
+    GHC.Types.Int -> Main.Username -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,1*U><L,U>, Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Main.Username)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Main.$w$cshowsPrec8 ww1 w1 w2 }) -}
+34377967b251a1081e7f6e99186ed2ab
+  $fShowVideo :: GHC.Show.Show Main.Video
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Video
+                  Main.$fShowVideo_$cshowsPrec
+                  Main.$fShowVideo_$cshow
+                  Main.$fShowVideo_$cshowList -}
+34377967b251a1081e7f6e99186ed2ab
+  $fShowVideo1 :: Main.Video -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(1*U,1*U)><L,U>,
+     Unfolding: (\ (w :: Main.Video) (w1 :: GHC.Base.String) ->
+                 case w of ww { Main.Video ww1 ww2 ->
+                 Main.$w$cshowsPrec4 0# ww1 ww2 w1 }) -}
+b8e95c4602050b0cf2cb900f2b8d449d
+  $fShowVideo2 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   Main.$fShowMediaUpload9) -}
+f1049b8c027197f4099ac6df6327d7ea
+  $fShowVideoText :: GHC.Show.Show Main.VideoText
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.VideoText
+                  Main.$fShowVideoText_$cshowsPrec
+                  Main.$fShowVideoText_$cshow
+                  Main.$fShowVideoText_$cshowList -}
+f1049b8c027197f4099ac6df6327d7ea
+  $fShowVideoText1 :: Main.VideoText -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,1*U><L,U>,
+     Unfolding: (\ (w :: Main.VideoText) (w1 :: GHC.Base.String) ->
+                 Main.$w$cshowsPrec5 0# w w1) -}
+f1049b8c027197f4099ac6df6327d7ea
+  $fShowVideoText_$cshow :: Main.VideoText -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: Main.VideoText) ->
+                 GHC.CString.unpackAppendCString#
+                   Main.$fShowMedia3
+                   (GHC.Types.:
+                      @ GHC.Types.Char
+                      GHC.Show.$fShow(,)3
+                      (GHC.Show.showLitString
+                         x `cast` (Main.N:VideoText[0])
+                         Main.$fShowImageUrl2))) -}
+f1049b8c027197f4099ac6df6327d7ea
+  $fShowVideoText_$cshowList :: [Main.VideoText] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Main.VideoText]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Main.VideoText Main.$fShowVideoText1 ls s) -}
+f1049b8c027197f4099ac6df6327d7ea
+  $fShowVideoText_$cshowsPrec ::
+    GHC.Types.Int -> Main.VideoText -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,1*U><L,U>, Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Main.VideoText)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Main.$w$cshowsPrec5 ww1 w1 w2 }) -}
+2f3bf5d817ee75fad111c95b4efe2dc5
+  $fShowVideoUrl :: GHC.Show.Show Main.VideoUrl
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.VideoUrl
+                  Main.$fShowVideoUrl_$cshowsPrec
+                  Main.$fShowVideoUrl_$cshow
+                  Main.$fShowVideoUrl_$cshowList -}
+2f3bf5d817ee75fad111c95b4efe2dc5
+  $fShowVideoUrl1 :: Main.VideoUrl -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,1*U><L,U>,
+     Unfolding: (\ (w :: Main.VideoUrl) (w1 :: GHC.Base.String) ->
+                 Main.$w$cshowsPrec6 0# w w1) -}
+2f3bf5d817ee75fad111c95b4efe2dc5
+  $fShowVideoUrl_$cshow :: Main.VideoUrl -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: Main.VideoUrl) ->
+                 GHC.CString.unpackAppendCString#
+                   Main.$fShowMedia5
+                   (GHC.Types.:
+                      @ GHC.Types.Char
+                      GHC.Show.$fShow(,)3
+                      (GHC.Show.showLitString
+                         x `cast` (Main.N:VideoUrl[0])
+                         Main.$fShowImageUrl2))) -}
+2f3bf5d817ee75fad111c95b4efe2dc5
+  $fShowVideoUrl_$cshowList :: [Main.VideoUrl] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Main.VideoUrl]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Main.VideoUrl Main.$fShowVideoUrl1 ls s) -}
+2f3bf5d817ee75fad111c95b4efe2dc5
+  $fShowVideoUrl_$cshowsPrec ::
+    GHC.Types.Int -> Main.VideoUrl -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,1*U><L,U>, Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Main.VideoUrl)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Main.$w$cshowsPrec6 ww1 w1 w2 }) -}
+34377967b251a1081e7f6e99186ed2ab
+  $fShowVideo_$cshow :: Main.Video -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Main.Video) ->
+                 case w of ww { Main.Video ww1 ww2 -> Main.$w$cshow1 ww1 ww2 }) -}
+34377967b251a1081e7f6e99186ed2ab
+  $fShowVideo_$cshowList :: [Main.Video] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Main.Video]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Main.Video Main.$fShowVideo1 ls s) -}
+34377967b251a1081e7f6e99186ed2ab
+  $fShowVideo_$cshowsPrec ::
+    GHC.Types.Int -> Main.Video -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Main.Video)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Main.Video ww3 ww4 ->
+                 Main.$w$cshowsPrec4 ww1 ww3 ww4 w2 } }) -}
+252626cd77b58e2cda89e358f639e237
+  $sel:imageUrl:UnvalidatedForm ::
+    Main.UnvalidatedForm -> GHC.Base.String
+  RecSel Left Main.UnvalidatedForm
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLLS),1*U(A,A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.UnvalidatedForm) ->
+                 case ds of wild { Main.UnvalidatedForm ds1 ds2 ds3 ds4 ds5 ->
+                 ds5 }) -}
+f3e796832f8c60877c92f58561007816
+  $sel:media:MediaUpload :: Main.MediaUpload -> Main.Media
+  RecSel Left Main.MediaUpload
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.MediaUpload) ->
+                 case ds of wild { Main.MediaUpload ds1 ds2 -> ds2 }) -}
+252626cd77b58e2cda89e358f639e237
+  $sel:mediaType:UnvalidatedForm ::
+    Main.UnvalidatedForm -> GHC.Base.String
+  RecSel Left Main.UnvalidatedForm
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSLLL),1*U(A,1*U,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.UnvalidatedForm) ->
+                 case ds of wild { Main.UnvalidatedForm ds1 ds2 ds3 ds4 ds5 ->
+                 ds2 }) -}
+f3e796832f8c60877c92f58561007816
+  $sel:name:MediaUpload :: Main.MediaUpload -> Main.Username
+  RecSel Left Main.MediaUpload
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.MediaUpload) ->
+                 case ds of wild { Main.MediaUpload ds1 ds2 -> ds1 }) -}
+34377967b251a1081e7f6e99186ed2ab
+  $sel:text:Video :: Main.Video -> Main.VideoText
+  RecSel Left Main.Video
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Video) ->
+                 case ds of wild { Main.Video ds1 ds2 -> ds2 }) -}
+34377967b251a1081e7f6e99186ed2ab
+  $sel:url:Video :: Main.Video -> Main.VideoUrl
+  RecSel Left Main.Video
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Video) ->
+                 case ds of wild { Main.Video ds1 ds2 -> ds1 }) -}
+252626cd77b58e2cda89e358f639e237
+  $sel:username:UnvalidatedForm ::
+    Main.UnvalidatedForm -> GHC.Base.String
+  RecSel Left Main.UnvalidatedForm
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLLLL),1*U(1*U,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.UnvalidatedForm) ->
+                 case ds of wild { Main.UnvalidatedForm ds1 ds2 ds3 ds4 ds5 ->
+                 ds1 }) -}
+252626cd77b58e2cda89e358f639e237
+  $sel:videoText:UnvalidatedForm ::
+    Main.UnvalidatedForm -> GHC.Base.String
+  RecSel Left Main.UnvalidatedForm
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLSL),1*U(A,A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.UnvalidatedForm) ->
+                 case ds of wild { Main.UnvalidatedForm ds1 ds2 ds3 ds4 ds5 ->
+                 ds4 }) -}
+252626cd77b58e2cda89e358f639e237
+  $sel:videoUrl:UnvalidatedForm ::
+    Main.UnvalidatedForm -> GHC.Base.String
+  RecSel Left Main.UnvalidatedForm
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLSLL),1*U(A,A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.UnvalidatedForm) ->
+                 case ds of wild { Main.UnvalidatedForm ds1 ds2 ds3 ds4 ds5 ->
+                 ds3 }) -}
+de423ede634a1274d3954739869403ac
+  $tc'Image :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16976216423785198835##
+                   16004428574520427446##
+                   Main.$trModule
+                   Main.$tc'Image2
+                   0#
+                   Main.$tc'Image1) -}
+2d5e1f1ab2162d29416263fd91bcf558
+  $tc'Image1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+ac41d2a06be34347b94d3f2f10dcc7d9
+  $tc'Image2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'Image3) -}
+65353a6d6ab28a1d5a1f39d471c25fe6
+  $tc'Image3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Image"#) -}
+ed7da0a467cc7caa803e60dc1a2b6cb4
+  $tc'ImageUrl :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13462801489106080501##
+                   6576883194181952904##
+                   Main.$trModule
+                   Main.$tc'ImageUrl2
+                   0#
+                   Main.$tc'ImageUrl1) -}
+9cb432a04db4c4bcb71f1d104d9d1567
+  $tc'ImageUrl1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+46d8cdba94599ccb31955ad94b215c87
+  $tc'ImageUrl2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'ImageUrl3) -}
+5f466172d1feac55531016d7cafba35f
+  $tc'ImageUrl3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'ImageUrl"#) -}
+9b4371d143b27d04821c538fc78d0d9e
+  $tc'Img :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11843003862258401229##
+                   11063922796843255190##
+                   Main.$trModule
+                   Main.$tc'Img2
+                   0#
+                   Main.$tc'Img1) -}
+d9c35824925b0bf4ab174382e4b65f9a
+  $tc'Img1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+dd93e5dd657e8fb6597cb03b0d808cbf
+  $tc'Img2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'Img3) -}
+5c518ca157181b8f5b9ee911fa7abe5a
+  $tc'Img3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Img"#) -}
+5887012c807cd96c0e66807d81977d5f
+  $tc'InvalidImageUrl :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9304289442771046940##
+                   11101698957890684191##
+                   Main.$trModule
+                   Main.$tc'InvalidImageUrl2
+                   0#
+                   Main.$tc'InvalidImageUrl1) -}
+91720d40190bd07edec094ccad3e6d6f
+  $tc'InvalidImageUrl1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+3cfa45e03ec2d40702f5c595c9589762
+  $tc'InvalidImageUrl2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'InvalidImageUrl3) -}
+b4c2d61286b70e522dcc84e9e2df83cf
+  $tc'InvalidImageUrl3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'InvalidImageUrl"#) -}
+dfcbd7b89e2d796329739f317e26a1e5
+  $tc'InvalidMediaType :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3726667784316232505##
+                   17076538695625484960##
+                   Main.$trModule
+                   Main.$tc'InvalidMediaType1
+                   0#
+                   Main.$tc'InvalidImageUrl1) -}
+41fb8c5b43b741138c71d84b1ff9a91a
+  $tc'InvalidMediaType1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'InvalidMediaType2) -}
+744d5697914138aa1e8718a257262f25
+  $tc'InvalidMediaType2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'InvalidMediaType"#) -}
+41ebd83fc808d9e3f0d8a3e7b2a2090b
+  $tc'InvalidVideoUrl :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4779516250544899938##
+                   4195659308217997733##
+                   Main.$trModule
+                   Main.$tc'InvalidVideoUrl1
+                   0#
+                   Main.$tc'InvalidImageUrl1) -}
+c853095954c700d97de2cc93d31b5a1b
+  $tc'InvalidVideoUrl1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'InvalidVideoUrl2) -}
+068395a6fd4b640e4133b663e8e0fed4
+  $tc'InvalidVideoUrl2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'InvalidVideoUrl"#) -}
+8087d11ece46f1dd45166d679de2e9a3
+  $tc'MediaUpload :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11608644082646201563##
+                   328936023133879730##
+                   Main.$trModule
+                   Main.$tc'MediaUpload2
+                   0#
+                   Main.$tc'MediaUpload1) -}
+430eac4db56398a62fc272b39e149540
+  $tc'MediaUpload1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+2aaf2e752068e1e34e2b7b5f7902192b
+  $tc'MediaUpload2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'MediaUpload3) -}
+f4fb4093f129fe05c98ab10164318b60
+  $tc'MediaUpload3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'MediaUpload"#) -}
+ff37a1f26c375e623a26710cd17d44f3
+  $tc'TypeImage :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8322848963749380449##
+                   16039407111232339159##
+                   Main.$trModule
+                   Main.$tc'TypeImage2
+                   0#
+                   Main.$tc'TypeImage1) -}
+f5e7da929bb3e6fe1f35f241e818cbc5
+  $tc'TypeImage1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+05da13332c1bd51860ebc61d21d7ab05
+  $tc'TypeImage2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'TypeImage3) -}
+337966cb08d9deecd53e1cc42d2134f0
+  $tc'TypeImage3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'TypeImage"#) -}
+a37bd4aa69b3bc9346240152fd0513b2
+  $tc'TypeVideo :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6379535874153919211##
+                   261951796920969697##
+                   Main.$trModule
+                   Main.$tc'TypeVideo1
+                   0#
+                   Main.$tc'TypeImage1) -}
+dce70351093e655449a04b38189b97ae
+  $tc'TypeVideo1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'TypeVideo2) -}
+ed5f47bb3a67cacba150515d52087c65
+  $tc'TypeVideo2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'TypeVideo"#) -}
+10fdc9760f5c9e501c9487eaae5d3dd4
+  $tc'UnvalidatedForm :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4828342690753737201##
+                   15576574433240583093##
+                   Main.$trModule
+                   Main.$tc'UnvalidatedForm2
+                   0#
+                   Main.$tc'UnvalidatedForm1) -}
+b2d5de4fb731aac3a9eba8abb9942da1
+  $tc'UnvalidatedForm1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+1fe2e9202112fb4e46952e3f55994ce1
+  $tc'UnvalidatedForm2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'UnvalidatedForm3) -}
+539282aa906950478af71f60a6f27a9f
+  $tc'UnvalidatedForm3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'UnvalidatedForm"#) -}
+bc7ff381bce0f6fb9ff9c4b53b81ffca
+  $tc'Username :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6567400101730486773##
+                   6485741451029794036##
+                   Main.$trModule
+                   Main.$tc'Username2
+                   0#
+                   Main.$tc'Username1) -}
+a7df16c0316cbb1e0ad488fcee1c2e86
+  $tc'Username1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+05c582cc9f0c6374d9d662aa29f32e67
+  $tc'Username2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'Username3) -}
+733ed87942b7712f9f9ff1dc9e08d926
+  $tc'Username3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Username"#) -}
+32adc765df2ed9bc3b16a237ec011e01
+  $tc'UsernameHasInvalidChars :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13158418455577223338##
+                   12975369201891749972##
+                   Main.$trModule
+                   Main.$tc'UsernameHasInvalidChars1
+                   0#
+                   Main.$tc'InvalidImageUrl1) -}
+fce381b29a0623ef0a8898e2260938f6
+  $tc'UsernameHasInvalidChars1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'UsernameHasInvalidChars2) -}
+392698c68d34552fb084ff58d1685b0a
+  $tc'UsernameHasInvalidChars2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'UsernameHasInvalidChars"#) -}
+7d025e50775d5ba7df3e613c8e2baecd
+  $tc'UsernameTooShort :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13125502217211852436##
+                   10974549865988140638##
+                   Main.$trModule
+                   Main.$tc'UsernameTooShort1
+                   0#
+                   Main.$tc'InvalidImageUrl1) -}
+1059c99e125fba407c3f17dc4ac6d055
+  $tc'UsernameTooShort1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'UsernameTooShort2) -}
+3f74b53b57100fde25fdd6107b0fbfbb
+  $tc'UsernameTooShort2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'UsernameTooShort"#) -}
+9622d652d1bde733fb0ac0355bca493d
+  $tc'Vid :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3922725267073687256##
+                   9094390815018355536##
+                   Main.$trModule
+                   Main.$tc'Vid2
+                   0#
+                   Main.$tc'Vid1) -}
+55056b86ff9f940d9807e872fb836d9f
+  $tc'Vid1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+be39545444fcc280c82a6d071cf9ad18
+  $tc'Vid2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'Vid3) -}
+fa075ce9f539bb7d39f82bd712332a5c
+  $tc'Vid3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Vid"#) -}
+82634269a94f17a2cc09e65747bbd58a
+  $tc'Video :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5361657830300535788##
+                   16691358831029411088##
+                   Main.$trModule
+                   Main.$tc'Video2
+                   0#
+                   Main.$tc'Video1) -}
+59886c4aaa355c4bb5f6f8eef80e711d
+  $tc'Video1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+d874514718c8a445001c73b880811426
+  $tc'Video2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'Video3) -}
+e199a7d647eb59e5a48043e9ec47503f
+  $tc'Video3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Video"#) -}
+3dd950e142a643a2fcc434ef9db30552
+  $tc'VideoText :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18009260204687992549##
+                   4996846613849465618##
+                   Main.$trModule
+                   Main.$tc'VideoText2
+                   0#
+                   Main.$tc'VideoText1) -}
+11559e53bfa12ed92a005762ad217e76
+  $tc'VideoText1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+b990f58682613c75ae10ac5cf1c2e450
+  $tc'VideoText2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'VideoText3) -}
+e7151b39b5b8e586f11a5e6fb784d2b8
+  $tc'VideoText3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'VideoText"#) -}
+cc1cc716e1e522998f02322284590971
+  $tc'VideoTextEmpty :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13571700302814774422##
+                   14024911275787852554##
+                   Main.$trModule
+                   Main.$tc'VideoTextEmpty1
+                   0#
+                   Main.$tc'InvalidImageUrl1) -}
+a7551e1a48e44071dbb4702c5680b7ff
+  $tc'VideoTextEmpty1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'VideoTextEmpty2) -}
+e60cc58662ea57279d06a505f63e6cb6
+  $tc'VideoTextEmpty2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'VideoTextEmpty"#) -}
+37e622ece5a15d70bbca0937c2171166
+  $tc'VideoUrl :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15521401051265587546##
+                   14102536964691704805##
+                   Main.$trModule
+                   Main.$tc'VideoUrl2
+                   0#
+                   Main.$tc'VideoUrl1) -}
+c5830afd4ab7467a1d9635a4dfedaf0a
+  $tc'VideoUrl1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+70dd01ef6404217903de7f0cccee6bae
+  $tc'VideoUrl2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'VideoUrl3) -}
+565dd4f705008d39ade5d90fdd7f2093
+  $tc'VideoUrl3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'VideoUrl"#) -}
+175f9f909af2a838766f029a1d9251e9
+  $tcError :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14531580327786059250##
+                   15680551078421573241##
+                   Main.$trModule
+                   Main.$tcError1
+                   0#
+                   GHC.Types.krep$*) -}
+633f55ad12ed84a22297c5a870740eed
+  $tcError1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tcError2) -}
+27f75fa9cc8812d3affda42c148e40dc
+  $tcError2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Error"#) -}
+23cdaacd0e72f730c53dbc997cbd9f06
+  $tcImage :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17908036843486858001##
+                   4153992609603806635##
+                   Main.$trModule
+                   Main.$tcImage1
+                   0#
+                   GHC.Types.krep$*) -}
+0e544f90665f96a498ab4491ea7100af
+  $tcImage1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tcImage2) -}
+cd50150870e48fc7a19c82fccb428f67
+  $tcImage2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Image"#) -}
+08d7c05a1bf51fe407a74921b26472eb
+  $tcImageUrl :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1890158411379408400##
+                   2050129370147859036##
+                   Main.$trModule
+                   Main.$tcImageUrl1
+                   0#
+                   GHC.Types.krep$*) -}
+b2413650bf451511e37ee6204200cb55
+  $tcImageUrl1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tcImageUrl2) -}
+50eaef32833989c834bf45dc341b30be
+  $tcImageUrl2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("ImageUrl"#) -}
+f9885c2712e9b223e428ef59adb646ae
+  $tcMedia :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3220531263112836695##
+                   3694053781282370524##
+                   Main.$trModule
+                   Main.$tcMedia1
+                   0#
+                   GHC.Types.krep$*) -}
+27ad2d426f5aa990429ab5b2e7835e89
+  $tcMedia1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tcMedia2) -}
+1fdfe4fd604a915767f78c6d55b6e022
+  $tcMedia2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Media"#) -}
+91b8ede437b49ba84d2ceb2dc24ddb5c
+  $tcMediaType :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15483280538034565000##
+                   12465604935223625072##
+                   Main.$trModule
+                   Main.$tcMediaType1
+                   0#
+                   GHC.Types.krep$*) -}
+56ef64b1674a1f8a77569f1c5db94024
+  $tcMediaType1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tcMediaType2) -}
+1f4cb860bfeb6f597a7d0854c3674ecd
+  $tcMediaType2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("MediaType"#) -}
+a5aa10f875acea72f254f35060dcee97
+  $tcMediaUpload :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6855665468313953322##
+                   7801596345539385334##
+                   Main.$trModule
+                   Main.$tcMediaUpload1
+                   0#
+                   GHC.Types.krep$*) -}
+e72603ed697c96482c0f4134b2716e1b
+  $tcMediaUpload1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tcMediaUpload2) -}
+f8cfb767def2f3b23bb01a0025d4980b
+  $tcMediaUpload2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("MediaUpload"#) -}
+506c7c62a49036f50be13ae1db175967
+  $tcUnvalidatedForm :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11351898712268287660##
+                   1113799432016415817##
+                   Main.$trModule
+                   Main.$tcUnvalidatedForm1
+                   0#
+                   GHC.Types.krep$*) -}
+bffda53cec91d2c1dce348f8dd018351
+  $tcUnvalidatedForm1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tcUnvalidatedForm2) -}
+a4be584fc0b67488a69d1fa59aad07ba
+  $tcUnvalidatedForm2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UnvalidatedForm"#) -}
+6564452677ee4392086b9166e6cb561a
+  $tcUsername :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15373748454731593063##
+                   10568382547340338205##
+                   Main.$trModule
+                   Main.$tcUsername1
+                   0#
+                   GHC.Types.krep$*) -}
+65f68b112891fc60a71308e44ce1d074
+  $tcUsername1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tcUsername2) -}
+865cf26342fee30e85a3e0bc6df6d87a
+  $tcUsername2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Username"#) -}
+4397d889a94eb54aab7c7e6ff903dbfc
+  $tcVideo :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8942452965829227990##
+                   13794449562532382797##
+                   Main.$trModule
+                   Main.$tcVideo1
+                   0#
+                   GHC.Types.krep$*) -}
+2754e60c188d969810af7c58f1f071fe
+  $tcVideo1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tcVideo2) -}
+b2e725915885985dd86e125eec7d2066
+  $tcVideo2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Video"#) -}
+b7c0cd02715a84ad7f47e4ddacd3401b
+  $tcVideoText :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3657993891479127810##
+                   332487311496328228##
+                   Main.$trModule
+                   Main.$tcVideoText1
+                   0#
+                   GHC.Types.krep$*) -}
+7154726afc1ace150f4a6c614184d656
+  $tcVideoText1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tcVideoText2) -}
+828ad060adf68c098ba8828005fb6e64
+  $tcVideoText2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("VideoText"#) -}
+cb123e6eb8d9ad184f7e55580543da15
+  $tcVideoUrl :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7463782525605829798##
+                   4046008438979116695##
+                   Main.$trModule
+                   Main.$tcVideoUrl1
+                   0#
+                   GHC.Types.krep$*) -}
+bf0e8c77bd92886b18db2df88731c4fa
+  $tcVideoUrl1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tcVideoUrl2) -}
+2b898382ce0274518f6e613e3c300ed7
+  $tcVideoUrl2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("VideoUrl"#) -}
+be86c9d078d3acbf19ba91fe74a24273
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule3 Main.$trModule1) -}
+b09d86f2c49dd5176b544d8d13ddb6c5
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule2) -}
+e5875966b74dad2d29772660b8a75e33
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Main"#) -}
+23b03bd7d075a00f5ad1ee10e6add7b8
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule4) -}
+d026be77cb9ced20e35a61514e0458aa
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+512f65e5b794abe88983cbcb8c1e30c0
+  $w$cshow :: Main.Username -> Main.Media -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (ww :: Main.Username) (ww1 :: Main.Media) ->
+                 GHC.CString.unpackAppendCString#
+                   Main.$fShowMediaUpload5
+                   (GHC.CString.unpackAppendCString#
+                      Main.$fShowMediaUpload4
+                      (GHC.CString.unpackAppendCString#
+                         Main.$fShowMediaUpload3
+                         (GHC.Types.:
+                            @ GHC.Types.Char
+                            GHC.Show.$fShow(,)3
+                            (GHC.Show.showLitString
+                               ww `cast` (Main.N:Username[0])
+                               (GHC.Types.:
+                                  @ GHC.Types.Char
+                                  GHC.Show.$fShow(,)3
+                                  (GHC.Base.++
+                                     @ GHC.Types.Char
+                                     GHC.Show.showCommaSpace1
+                                     (GHC.CString.unpackAppendCString#
+                                        Main.$fShowMediaUpload2
+                                        (case ww1 of wild {
+                                           Main.Img b1
+                                           -> GHC.Base.++
+                                                @ GHC.Types.Char
+                                                Main.$fShowMedia10
+                                                (GHC.Types.:
+                                                   @ GHC.Types.Char
+                                                   GHC.Show.$fShow(,)4
+                                                   (GHC.Base.++
+                                                      @ GHC.Types.Char
+                                                      Main.$fShowImage3
+                                                      (GHC.Types.:
+                                                         @ GHC.Types.Char
+                                                         GHC.Show.$fShow(,)4
+                                                         (GHC.CString.unpackAppendCString#
+                                                            Main.$fShowImage2
+                                                            (GHC.Types.:
+                                                               @ GHC.Types.Char
+                                                               GHC.Show.$fShow(,)3
+                                                               (GHC.Show.showLitString
+                                                                  b1
+                                                                    `cast`
+                                                                  (Main.N:Image[0] ; Main.N:ImageUrl[0])
+                                                                  Main.$fShowMediaUpload10))))))
+                                           Main.Vid b1
+                                           -> GHC.Base.++
+                                                @ GHC.Types.Char
+                                                Main.$fShowMedia8
+                                                (case b1 of wild1 { Main.Video b2 b3 ->
+                                                 GHC.Types.:
+                                                   @ GHC.Types.Char
+                                                   GHC.Show.$fShow(,)4
+                                                   (GHC.CString.unpackAppendCString#
+                                                      Main.$fShowMedia7
+                                                      (GHC.CString.unpackAppendCString#
+                                                         Main.$fShowMedia6
+                                                         (GHC.CString.unpackAppendCString#
+                                                            Main.$fShowMedia5
+                                                            (GHC.Types.:
+                                                               @ GHC.Types.Char
+                                                               GHC.Show.$fShow(,)3
+                                                               (GHC.Show.showLitString
+                                                                  b2 `cast` (Main.N:VideoUrl[0])
+                                                                  (GHC.Types.:
+                                                                     @ GHC.Types.Char
+                                                                     GHC.Show.$fShow(,)3
+                                                                     (GHC.Base.++
+                                                                        @ GHC.Types.Char
+                                                                        GHC.Show.showCommaSpace1
+                                                                        (GHC.CString.unpackAppendCString#
+                                                                           Main.$fShowMedia4
+                                                                           (GHC.CString.unpackAppendCString#
+                                                                              Main.$fShowMedia3
+                                                                              (GHC.Types.:
+                                                                                 @ GHC.Types.Char
+                                                                                 GHC.Show.$fShow(,)3
+                                                                                 (GHC.Show.showLitString
+                                                                                    b3
+                                                                                      `cast`
+                                                                                    (Main.N:VideoText[0])
+                                                                                    Main.$fShowMediaUpload6))))))))))) }) }))))))))) -}
+25796b4df3d00601002bdc7e88ad6a87
+  $w$cshow1 :: Main.VideoUrl -> Main.VideoText -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (ww :: Main.VideoUrl) (ww1 :: Main.VideoText) ->
+                 GHC.CString.unpackAppendCString#
+                   Main.$fShowMedia7
+                   (GHC.CString.unpackAppendCString#
+                      Main.$fShowMedia6
+                      (GHC.CString.unpackAppendCString#
+                         Main.$fShowMedia5
+                         (GHC.Types.:
+                            @ GHC.Types.Char
+                            GHC.Show.$fShow(,)3
+                            (GHC.Show.showLitString
+                               ww `cast` (Main.N:VideoUrl[0])
+                               (GHC.Types.:
+                                  @ GHC.Types.Char
+                                  GHC.Show.$fShow(,)3
+                                  (GHC.Base.++
+                                     @ GHC.Types.Char
+                                     GHC.Show.showCommaSpace1
+                                     (GHC.CString.unpackAppendCString#
+                                        Main.$fShowMedia4
+                                        (GHC.CString.unpackAppendCString#
+                                           Main.$fShowMedia3
+                                           (GHC.Types.:
+                                              @ GHC.Types.Char
+                                              GHC.Show.$fShow(,)3
+                                              (GHC.Show.showLitString
+                                                 ww1 `cast` (Main.N:VideoText[0])
+                                                 Main.$fShowVideo2))))))))))) -}
+b0fed619f79a571e798d238ddde79140
+  $w$cshowsPrec :: Main.Error -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (w :: Main.Error) (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   Main.VideoTextEmpty
+                   -> GHC.Base.++ @ GHC.Types.Char Main.$fShowError11 w1
+                   Main.UsernameHasInvalidChars
+                   -> GHC.Base.++ @ GHC.Types.Char Main.$fShowError9 w1
+                   Main.UsernameTooShort
+                   -> GHC.Base.++ @ GHC.Types.Char Main.$fShowError7 w1
+                   Main.InvalidImageUrl
+                   -> GHC.Base.++ @ GHC.Types.Char Main.$fShowError5 w1
+                   Main.InvalidVideoUrl
+                   -> GHC.Base.++ @ GHC.Types.Char Main.$fShowError3 w1
+                   Main.InvalidMediaType
+                   -> GHC.Base.++ @ GHC.Types.Char Main.$fShowError1 w1 }) -}
+ec944ddbf23ed8e54f842f7e022b4830
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int# -> Main.Image -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><L,1*U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Main.Image)
+                   (w1 :: GHC.Base.String) ->
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Main.$fShowImage3
+                        (Main.$w$cshowsPrec2 11# w `cast` (Main.N:Image[0]) w1)
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Main.$fShowImage3
+                           (Main.$w$cshowsPrec2
+                              11#
+                              w `cast` (Main.N:Image[0])
+                              (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1))) }) -}
+d8edf540005c88e78823f62ccf66f88c
+  $w$cshowsPrec2 ::
+    GHC.Prim.Int#
+    -> Main.ImageUrl -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><L,1*U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Main.ImageUrl)
+                   (w1 :: GHC.Base.String) ->
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> GHC.CString.unpackAppendCString#
+                        Main.$fShowImage2
+                        (GHC.Types.:
+                           @ GHC.Types.Char
+                           GHC.Show.$fShow(,)3
+                           (GHC.Show.showLitString
+                              w `cast` (Main.N:ImageUrl[0])
+                              (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)3 w1)))
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           Main.$fShowImage2
+                           (GHC.Types.:
+                              @ GHC.Types.Char
+                              GHC.Show.$fShow(,)3
+                              (GHC.Show.showLitString
+                                 w `cast` (Main.N:ImageUrl[0])
+                                 (GHC.Types.:
+                                    @ GHC.Types.Char
+                                    GHC.Show.$fShow(,)3
+                                    (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1))))) }) -}
+fe3ed2fa00f1ec769f618c79c2eb52af
+  $w$cshowsPrec3 ::
+    GHC.Prim.Int# -> Main.Media -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Main.Media)
+                   (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   Main.Img b1
+                   -> case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             Main.$fShowMedia10
+                             (Main.$w$cshowsPrec1 11# b1 w1)
+                        1#
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Main.$fShowMedia10
+                                (Main.$w$cshowsPrec1
+                                   11#
+                                   b1
+                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1))) }
+                   Main.Vid b1
+                   -> case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             Main.$fShowMedia8
+                             (case b1 of ww1 { Main.Video ww2 ww3 ->
+                              Main.$w$cshowsPrec4 11# ww2 ww3 w1 })
+                        1#
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Main.$fShowMedia8
+                                (case b1 of ww1 { Main.Video ww2 ww3 ->
+                                 Main.$w$cshowsPrec4
+                                   11#
+                                   ww2
+                                   ww3
+                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1) })) } }) -}
+1cc1b0a3667058ecbc30671a8a2b1cff
+  $w$cshowsPrec4 ::
+    GHC.Prim.Int#
+    -> Main.VideoUrl
+    -> Main.VideoText
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><L,1*U><L,1*U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: Main.VideoUrl)
+                   (ww2 :: Main.VideoText)
+                   (w :: GHC.Base.String) ->
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> GHC.CString.unpackAppendCString#
+                        Main.$fShowMedia7
+                        (GHC.CString.unpackAppendCString#
+                           Main.$fShowMedia6
+                           (Main.$w$cshowsPrec6
+                              0#
+                              ww1
+                              (GHC.Base.++
+                                 @ GHC.Types.Char
+                                 GHC.Show.showCommaSpace1
+                                 (GHC.CString.unpackAppendCString#
+                                    Main.$fShowMedia4
+                                    (Main.$w$cshowsPrec5
+                                       0#
+                                       ww2
+                                       (GHC.CString.unpackAppendCString# Main.$fShowMedia2 w))))))
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           Main.$fShowMedia7
+                           (GHC.CString.unpackAppendCString#
+                              Main.$fShowMedia6
+                              (Main.$w$cshowsPrec6
+                                 0#
+                                 ww1
+                                 (GHC.Base.++
+                                    @ GHC.Types.Char
+                                    GHC.Show.showCommaSpace1
+                                    (GHC.CString.unpackAppendCString#
+                                       Main.$fShowMedia4
+                                       (Main.$w$cshowsPrec5
+                                          0#
+                                          ww2
+                                          (GHC.CString.unpackAppendCString#
+                                             Main.$fShowMedia2
+                                             (GHC.Types.:
+                                                @ GHC.Types.Char
+                                                GHC.Show.$fShow(,)2
+                                                w)))))))) }) -}
+f1049b8c027197f4099ac6df6327d7ea
+  $w$cshowsPrec5 ::
+    GHC.Prim.Int#
+    -> Main.VideoText -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><L,1*U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Main.VideoText)
+                   (w1 :: GHC.Base.String) ->
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> GHC.CString.unpackAppendCString#
+                        Main.$fShowMedia3
+                        (GHC.Types.:
+                           @ GHC.Types.Char
+                           GHC.Show.$fShow(,)3
+                           (GHC.Show.showLitString
+                              w `cast` (Main.N:VideoText[0])
+                              (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)3 w1)))
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           Main.$fShowMedia3
+                           (GHC.Types.:
+                              @ GHC.Types.Char
+                              GHC.Show.$fShow(,)3
+                              (GHC.Show.showLitString
+                                 w `cast` (Main.N:VideoText[0])
+                                 (GHC.Types.:
+                                    @ GHC.Types.Char
+                                    GHC.Show.$fShow(,)3
+                                    (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1))))) }) -}
+2f3bf5d817ee75fad111c95b4efe2dc5
+  $w$cshowsPrec6 ::
+    GHC.Prim.Int#
+    -> Main.VideoUrl -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><L,1*U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Main.VideoUrl)
+                   (w1 :: GHC.Base.String) ->
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> GHC.CString.unpackAppendCString#
+                        Main.$fShowMedia5
+                        (GHC.Types.:
+                           @ GHC.Types.Char
+                           GHC.Show.$fShow(,)3
+                           (GHC.Show.showLitString
+                              w `cast` (Main.N:VideoUrl[0])
+                              (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)3 w1)))
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           Main.$fShowMedia5
+                           (GHC.Types.:
+                              @ GHC.Types.Char
+                              GHC.Show.$fShow(,)3
+                              (GHC.Show.showLitString
+                                 w `cast` (Main.N:VideoUrl[0])
+                                 (GHC.Types.:
+                                    @ GHC.Types.Char
+                                    GHC.Show.$fShow(,)3
+                                    (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1))))) }) -}
+d29b038c3484999965cb899938a689bb
+  $w$cshowsPrec7 ::
+    GHC.Prim.Int#
+    -> Main.Username
+    -> Main.Media
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><L,1*U><L,1*U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: Main.Username)
+                   (ww2 :: Main.Media)
+                   (w :: GHC.Base.String) ->
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> GHC.CString.unpackAppendCString#
+                        Main.$fShowMediaUpload5
+                        (GHC.CString.unpackAppendCString#
+                           Main.$fShowMediaUpload4
+                           (Main.$w$cshowsPrec8
+                              0#
+                              ww1
+                              (GHC.Base.++
+                                 @ GHC.Types.Char
+                                 GHC.Show.showCommaSpace1
+                                 (GHC.CString.unpackAppendCString#
+                                    Main.$fShowMediaUpload2
+                                    (Main.$w$cshowsPrec3
+                                       0#
+                                       ww2
+                                       (GHC.CString.unpackAppendCString# Main.$fShowMedia2 w))))))
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           Main.$fShowMediaUpload5
+                           (GHC.CString.unpackAppendCString#
+                              Main.$fShowMediaUpload4
+                              (Main.$w$cshowsPrec8
+                                 0#
+                                 ww1
+                                 (GHC.Base.++
+                                    @ GHC.Types.Char
+                                    GHC.Show.showCommaSpace1
+                                    (GHC.CString.unpackAppendCString#
+                                       Main.$fShowMediaUpload2
+                                       (Main.$w$cshowsPrec3
+                                          0#
+                                          ww2
+                                          (GHC.CString.unpackAppendCString#
+                                             Main.$fShowMedia2
+                                             (GHC.Types.:
+                                                @ GHC.Types.Char
+                                                GHC.Show.$fShow(,)2
+                                                w)))))))) }) -}
+c28084e6215408a7b9cd0514e4cb0574
+  $w$cshowsPrec8 ::
+    GHC.Prim.Int#
+    -> Main.Username -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><L,1*U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Main.Username)
+                   (w1 :: GHC.Base.String) ->
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> GHC.CString.unpackAppendCString#
+                        Main.$fShowMediaUpload3
+                        (GHC.Types.:
+                           @ GHC.Types.Char
+                           GHC.Show.$fShow(,)3
+                           (GHC.Show.showLitString
+                              w `cast` (Main.N:Username[0])
+                              (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)3 w1)))
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           Main.$fShowMediaUpload3
+                           (GHC.Types.:
+                              @ GHC.Types.Char
+                              GHC.Show.$fShow(,)3
+                              (GHC.Show.showLitString
+                                 w `cast` (Main.N:Username[0])
+                                 (GHC.Types.:
+                                    @ GHC.Types.Char
+                                    GHC.Show.$fShow(,)3
+                                    (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1))))) }) -}
+591b52bb778033d9a9eef1cfce2669d5
+  $w$cshowsPrec9 ::
+    GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 7,
+     Strictness: <S,U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,U>,
+     Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: GHC.Base.String)
+                   (ww4 :: GHC.Base.String)
+                   (ww5 :: GHC.Base.String)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.CString.unpackAppendCString#
+                       Main.$fShowUnvalidatedForm8
+                       (GHC.Types.:
+                          @ GHC.Types.Char
+                          GHC.Show.$fShow(,)3
+                          (GHC.Show.showLitString
+                             ww1
+                             (GHC.Types.:
+                                @ GHC.Types.Char
+                                GHC.Show.$fShow(,)3
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   GHC.Show.showCommaSpace1
+                                   (GHC.CString.unpackAppendCString#
+                                      Main.$fShowUnvalidatedForm7
+                                      (GHC.Types.:
+                                         @ GHC.Types.Char
+                                         GHC.Show.$fShow(,)3
+                                         (GHC.Show.showLitString
+                                            ww2
+                                            (GHC.Types.:
+                                               @ GHC.Types.Char
+                                               GHC.Show.$fShow(,)3
+                                               (GHC.Base.++
+                                                  @ GHC.Types.Char
+                                                  GHC.Show.showCommaSpace1
+                                                  (GHC.CString.unpackAppendCString#
+                                                     Main.$fShowUnvalidatedForm6
+                                                     (GHC.Types.:
+                                                        @ GHC.Types.Char
+                                                        GHC.Show.$fShow(,)3
+                                                        (GHC.Show.showLitString
+                                                           ww3
+                                                           (GHC.Types.:
+                                                              @ GHC.Types.Char
+                                                              GHC.Show.$fShow(,)3
+                                                              (GHC.Base.++
+                                                                 @ GHC.Types.Char
+                                                                 GHC.Show.showCommaSpace1
+                                                                 (GHC.CString.unpackAppendCString#
+                                                                    Main.$fShowUnvalidatedForm5
+                                                                    (GHC.Types.:
+                                                                       @ GHC.Types.Char
+                                                                       GHC.Show.$fShow(,)3
+                                                                       (GHC.Show.showLitString
+                                                                          ww4
+                                                                          (GHC.Types.:
+                                                                             @ GHC.Types.Char
+                                                                             GHC.Show.$fShow(,)3
+                                                                             (GHC.Base.++
+                                                                                @ GHC.Types.Char
+                                                                                GHC.Show.showCommaSpace1
+                                                                                (GHC.CString.unpackAppendCString#
+                                                                                   Main.$fShowUnvalidatedForm4
+                                                                                   (GHC.Types.:
+                                                                                      @ GHC.Types.Char
+                                                                                      GHC.Show.$fShow(,)3
+                                                                                      (GHC.Show.showLitString
+                                                                                         ww5
+                                                                                         (GHC.Types.:
+                                                                                            @ GHC.Types.Char
+                                                                                            GHC.Show.$fShow(,)3
+                                                                                            (GHC.CString.unpackAppendCString#
+                                                                                               Main.$fShowMedia2
+                                                                                               x))))))))))))))))))))))))
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> GHC.Base.++ @ GHC.Types.Char Main.$fShowUnvalidatedForm2 (g w)
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Main.$fShowUnvalidatedForm2
+                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w))) }) -}
+1c5c3be571c160fb9e85351de5e74c57
+  $wformValidation ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> Data.Validation.Validation
+         (GHC.Base.NonEmpty Main.Error) Main.MediaUpload
+  {- Arity: 5, Strictness: <S,U><L,U><L,U><L,1*U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: GHC.Base.String)
+                   (ww4 :: GHC.Base.String) ->
+                 let {
+                   b1 :: Data.Validation.Validation
+                           (GHC.Base.NonEmpty Main.Error) Main.Media
+                   = case GHC.Base.eqString ww1 Main.formValidation7 of wild {
+                       GHC.Types.False
+                       -> case GHC.Base.eqString ww1 Main.formValidation6 of wild1 {
+                            GHC.Types.False
+                            -> case Main.formValidation5
+                               ret_ty (Main.FormValidation Main.Media)
+                               of {}
+                            GHC.Types.True
+                            -> case Main.$wisUrl ww2 of ww5 { Unit# ww6 ->
+                               case ww3 of wild2 {
+                                 []
+                                 -> case Main.formValidation1
+                                    ret_ty (Main.FormValidation Main.Media)
+                                    of {}
+                                 : ds1 ds2
+                                 -> Data.Validation.Success
+                                      @ (GHC.Base.NonEmpty Main.Error)
+                                      @ Main.Media
+                                      (Main.Vid
+                                         (Main.Video
+                                            ww6 `cast` (Sym (Main.N:VideoUrl[0]))
+                                            wild2 `cast` (Sym (Main.N:VideoText[0])))) } } }
+                       GHC.Types.True
+                       -> case Main.$wisUrl ww4 of ww5 { Unit# ww6 ->
+                          Data.Validation.Success
+                            @ (GHC.Base.NonEmpty Main.Error)
+                            @ Main.Media
+                            (Main.Img
+                               ww4 `cast` (Sym (Main.N:ImageUrl[0]) ; Sym (Main.N:Image[0]))) } }
+                 } in
+                 case Main.validateUsername ww of wild {
+                   Data.Validation.Failure e
+                   -> Data.Validation.Failure
+                        @ (GHC.Base.NonEmpty Main.Error)
+                        @ Main.MediaUpload
+                        (case b1 of wild1 {
+                           Data.Validation.Failure e2
+                           -> GHC.Base.$fSemigroupNonEmpty_$c<> @ Main.Error e e2
+                           Data.Validation.Success ds1 -> e })
+                   Data.Validation.Success a1
+                   -> case b1 of wild1 {
+                        Data.Validation.Failure e2
+                        -> Data.Validation.Failure
+                             @ (GHC.Base.NonEmpty Main.Error)
+                             @ Main.MediaUpload
+                             e2
+                        Data.Validation.Success a2
+                        -> Data.Validation.Success
+                             @ (GHC.Base.NonEmpty Main.Error)
+                             @ Main.MediaUpload
+                             (Main.MediaUpload a1 a2) } }) -}
+3ead5b685875fbbfb25ce25521f5270d
+  $winvalid :: GHC.Prim.Void# -> Main.FormValidation a
+  {- Arity: 1, HasNoCafRefs, Strictness: <B,A>b, Inline: [2] -}
+b5c8171518d21670d090463cb16e5fc4
+  $wisUrl :: GHC.Base.String -> (# GHC.Base.String #)
+  {- Arity: 1, Strictness: <L,U>, Inline: [2],
+     Unfolding: (\ (w :: GHC.Base.String) ->
+                 case Main.formValidation2 of wild {
+                   Data.Either.Left msg
+                   -> case Text.Regex.TDFA.String.$fRegexMakerRegexCompOptionExecOption[]1
+                             msg
+                      ret_ty (# GHC.Base.String #)
+                      of {}
+                   Data.Either.Right v
+                   -> case v of ww { Text.Regex.TDFA.Common.Regex ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ->
+                      case ww1 of ww11 { Text.Regex.TDFA.Common.DFA ww12 ww13 ->
+                      case ww8 of wild1 {
+                        GHC.Types.False
+                        -> case Text.Regex.TDFA.NewDFA.Tester.matchTest_multi3
+                                  ww13
+                                  w of wild2 {
+                             GHC.Types.False
+                             -> case Main.alphaNum1 ret_ty (# GHC.Base.String #) of {}
+                             GHC.Types.True -> (# w #) }
+                        GHC.Types.True
+                        -> case Text.Regex.TDFA.NewDFA.Tester.matchTest_single3
+                                  ww13
+                                  w of wild2 {
+                             GHC.Types.False
+                             -> case Main.alphaNum1 ret_ty (# GHC.Base.String #) of {}
+                             GHC.Types.True -> (# w #) } } } } }) -}
+b0fed619f79a571e798d238ddde79140
+  data Error
+    = VideoTextEmpty
+    | UsernameHasInvalidChars
+    | UsernameTooShort
+    | InvalidImageUrl
+    | InvalidVideoUrl
+    | InvalidMediaType
+e2502b93ea96676f160703ee204554f0
+  type FormValidation =
+    Data.Validation.Validation (GHC.Base.NonEmpty Main.Error) :: * -> *
+ec944ddbf23ed8e54f842f7e022b4830
+  newtype Image = Image Main.ImageUrl
+d8edf540005c88e78823f62ccf66f88c
+  newtype ImageUrl = ImageUrl GHC.Base.String
+fe3ed2fa00f1ec769f618c79c2eb52af
+  data Media = Img Main.Image | Vid Main.Video
+924a9b1667fe168bf4ab2a37d58d62e0
+  data MediaType = TypeImage | TypeVideo
+f3e796832f8c60877c92f58561007816
+  data MediaUpload
+    = MediaUpload {name :: Main.Username, media :: Main.Media}
+252626cd77b58e2cda89e358f639e237
+  data UnvalidatedForm
+    = UnvalidatedForm {username :: GHC.Base.String,
+                       mediaType :: GHC.Base.String,
+                       videoUrl :: GHC.Base.String,
+                       videoText :: GHC.Base.String,
+                       imageUrl :: GHC.Base.String}
+c28084e6215408a7b9cd0514e4cb0574
+  newtype Username = Username GHC.Base.String
+34377967b251a1081e7f6e99186ed2ab
+  data Video = Video {url :: Main.VideoUrl, text :: Main.VideoText}
+f1049b8c027197f4099ac6df6327d7ea
+  newtype VideoText = VideoText GHC.Base.String
+2f3bf5d817ee75fad111c95b4efe2dc5
+  newtype VideoUrl = VideoUrl GHC.Base.String
+d564e5a7de0bab006b4f911119b4ed86
+  alphaNum :: GHC.Base.String -> Main.FormValidation GHC.Base.String
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (str :: GHC.Base.String) ->
+                 let {
+                   exit :: Data.Validation.Validation
+                             (GHC.Base.NonEmpty Main.Error) GHC.Base.String
+                     <join 0>
+                   = Data.Validation.Success
+                       @ (GHC.Base.NonEmpty Main.Error)
+                       @ GHC.Base.String
+                       str
+                 } in
+                 letrec {
+                   go :: [GHC.Types.Char]
+                         -> Data.Validation.Validation
+                              (GHC.Base.NonEmpty Main.Error) GHC.Base.String
+                     <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [GHC.Types.Char]) ->
+                     case ds of wild {
+                       [] -> exit
+                       : y ys
+                       -> case y of wild1 { GHC.Types.C# c# ->
+                          case {__pkg_ccall base-4.12.0.0 GHC.Prim.Int#
+                                                          -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                          -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                                GHC.Prim.Int# #)}
+                                 (GHC.Prim.ord# c#)
+                                 GHC.Prim.realWorld# of wild2 { (#,#) ds1 ds2 ->
+                          case ds2 of wild3 { DEFAULT -> go ys 0# -> Main.alphaNum1 } } } }
+                 } in
+                 go str) -}
+5da7042c28d2aa42125a0ef637405c6d
+  alphaNum1 :: Main.FormValidation GHC.Base.String
+  {- Strictness: b -}
+f1e2616424241f91155414966771dc1d
+  formValidation ::
+    Main.UnvalidatedForm -> Main.FormValidation Main.MediaUpload
+  {- Arity: 1, Strictness: <S(SLLLL),1*U(U,U,U,1*U,U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Main.UnvalidatedForm) ->
+                 case w of ww { Main.UnvalidatedForm ww1 ww2 ww3 ww4 ww5 ->
+                 Main.$wformValidation ww1 ww2 ww3 ww4 ww5 }) -}
+4a925eb76090367a4a4f490fdc659a87
+  formValidation1 :: Main.FormValidation Main.VideoText
+  {- Strictness: b -}
+886ea6ddff1654ea4976e02872bd6442
+  formValidation2 ::
+    Data.Either.Either GHC.Base.String Text.Regex.TDFA.Common.Regex
+  {- Unfolding: (Text.Regex.TDFA.String.compile
+                   Text.Regex.TDFA.Common.$fRegexOptionsRegexCompOptionExecOption_$cdefaultCompOpt
+                   Text.Regex.TDFA.Common.$fRegexOptionsRegexCompOptionExecOption_$cblankExecOpt
+                   Main.formValidation3) -}
+023c61afe8a179b661d904a94c5a093a
+  formValidation3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.formValidation4) -}
+e79f91cad88a8236b198b6dc38ca3176
+  formValidation4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("^(https?)://[^\\s/$.?#].[^\\s]*$"#) -}
+b051f4357dfbca4416cf782fc83c0108
+  formValidation5 :: Main.FormValidation Main.MediaType
+  {- Strictness: b -}
+82949856b68e65f64dc221581b87ed71
+  formValidation6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$tcVideo2) -}
+bd26cf8cfbeabddc5797ddb3c0d25a9b
+  formValidation7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$tcImage2) -}
+a3fe091f2e0163ccb4e979e23e82428a
+  invalid :: Main.Error -> Main.FormValidation a
+  {- Arity: 1, HasNoCafRefs, Strictness: <B,A>b, Inline: [2],
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a (w :: Main.Error) -> Main.$winvalid @ a GHC.Prim.void#) -}
+5bfc0d663be042cb0eff0596ec65530f
+  isUrl ::
+    Main.Error
+    -> GHC.Base.String -> Main.FormValidation GHC.Base.String
+  {- Arity: 2, Strictness: <L,A><L,U>m2, Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Main.Error) (w1 :: GHC.Base.String) ->
+                 case Main.$wisUrl w1 of ww { Unit# ww1 ->
+                 Data.Validation.Success
+                   @ (GHC.Base.NonEmpty Main.Error)
+                   @ GHC.Base.String
+                   ww1 }) -}
+e45ad3e17b1fcbd28c277c622bcdf958
+  main :: GHC.Types.IO ()
+  {- Arity: 1,
+     Unfolding: (GHC.IO.Handle.Text.hPutStr'
+                   GHC.IO.Handle.FD.stdout
+                   Main.main1
+                   GHC.Types.True) -}
+573abaaafb97741ae0350748ee8bc38d
+  main1 :: GHC.Base.String
+fa7ac8f99d7da9faed6bb9e860b8224a
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1 @ () Main.main) -}
+218b6a07418654077b63c146c6c2ecd6
+  minLength ::
+    GHC.Types.Int
+    -> GHC.Base.String -> Main.FormValidation GHC.Base.String
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,U>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (l :: GHC.Types.Int) (str :: GHC.Base.String) ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Char str 0# of ww2 { DEFAULT ->
+                 case l of wild1 { GHC.Types.I# y ->
+                 case GHC.Prim.>=# ww2 y of lwild {
+                   DEFAULT -> Main.alphaNum1
+                   1#
+                   -> Data.Validation.Success
+                        @ (GHC.Base.NonEmpty Main.Error)
+                        @ GHC.Base.String
+                        str } } }) -}
+e2a9864c3b535dc64144c23c198dbfcd
+  validateImage :: GHC.Base.String -> Main.FormValidation Main.Media
+  {- Arity: 1, Strictness: <L,U>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ (url :: GHC.Base.String) ->
+                 case Main.isUrl Main.InvalidImageUrl url of wild {
+                   Data.Validation.Failure e
+                   -> Data.Validation.Failure
+                        @ (GHC.Base.NonEmpty Main.Error)
+                        @ Main.Media
+                        e
+                   Data.Validation.Success a1
+                   -> Data.Validation.Success
+                        @ (GHC.Base.NonEmpty Main.Error)
+                        @ Main.Media
+                        (Main.Img
+                           url
+                             `cast`
+                           (Sym (Main.N:ImageUrl[0]) ; Sym (Main.N:Image[0]))) }) -}
+aea91ff5d74a52025ee6b5c42bef9bef
+  validateMediaType ::
+    GHC.Base.String -> Main.FormValidation Main.MediaType
+  {- Arity: 1, Strictness: <S,U>m2, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Base.String) ->
+                 case GHC.Base.eqString w Main.formValidation7 of wild {
+                   GHC.Types.False
+                   -> case GHC.Base.eqString w Main.formValidation6 of wild1 {
+                        GHC.Types.False -> Main.formValidation5
+                        GHC.Types.True
+                        -> Data.Validation.Success
+                             @ (GHC.Base.NonEmpty Main.Error)
+                             @ Main.MediaType
+                             Main.TypeVideo }
+                   GHC.Types.True
+                   -> Data.Validation.Success
+                        @ (GHC.Base.NonEmpty Main.Error)
+                        @ Main.MediaType
+                        Main.TypeImage }) -}
+e4a4f083a71e56c4defdc25987471c43
+  validateUsername ::
+    GHC.Base.String -> Main.FormValidation Main.Username
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (name :: GHC.Base.String) ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Char name 0# of ww2 { DEFAULT ->
+                 case GHC.Prim.>=# ww2 3# of lwild {
+                   DEFAULT
+                   -> case Main.alphaNum1
+                      ret_ty (Data.Validation.Validation
+                                (GHC.Base.NonEmpty Main.Error) Main.Username)
+                      of {}
+                   1#
+                   -> let {
+                        exit :: Data.Validation.Validation
+                                  (GHC.Base.NonEmpty Main.Error) Main.Username
+                          <join 0>
+                        = Data.Validation.Success
+                            @ (GHC.Base.NonEmpty Main.Error)
+                            @ Main.Username
+                            name `cast` (Sym (Main.N:Username[0]))
+                      } in
+                      letrec {
+                        go :: [GHC.Types.Char]
+                              -> Data.Validation.Validation
+                                   (GHC.Base.NonEmpty Main.Error) Main.Username
+                          <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                        = \ (ds :: [GHC.Types.Char]) ->
+                          case ds of wild {
+                            [] -> exit
+                            : y ys
+                            -> case y of wild1 { GHC.Types.C# c# ->
+                               case {__pkg_ccall base-4.12.0.0 GHC.Prim.Int#
+                                                               -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                               -> (# GHC.Prim.State#
+                                                                       GHC.Prim.RealWorld,
+                                                                     GHC.Prim.Int# #)}
+                                      (GHC.Prim.ord# c#)
+                                      GHC.Prim.realWorld# of wild2 { (#,#) ds1 ds2 ->
+                               case ds2 of wild3 {
+                                 DEFAULT -> go ys
+                                 0#
+                                 -> case Main.alphaNum1
+                                    ret_ty (Data.Validation.Validation
+                                              (GHC.Base.NonEmpty Main.Error) Main.Username)
+                                    of {} } } } }
+                      } in
+                      go name } }) -}
+2074e623490c56260b944be242e95c52
+  validateVideo ::
+    GHC.Base.String
+    -> GHC.Base.String -> Main.FormValidation Main.Media
+  {- Arity: 2, Strictness: <L,U><S,1*U>m2,
+     Unfolding: (\ (url :: GHC.Base.String) (text :: GHC.Base.String) ->
+                 case Main.$wisUrl url of ww { Unit# ww1 ->
+                 case text of wild {
+                   []
+                   -> case Main.formValidation1
+                      ret_ty (Data.Validation.Validation
+                                (GHC.Base.NonEmpty Main.Error) Main.Media)
+                      of {}
+                   : ds1 ds2
+                   -> Data.Validation.Success
+                        @ (GHC.Base.NonEmpty Main.Error)
+                        @ Main.Media
+                        (Main.Vid
+                           (Main.Video
+                              ww1 `cast` (Sym (Main.N:VideoUrl[0]))
+                              wild `cast` (Sym (Main.N:VideoText[0])))) } }) -}
+377a57431e6ad850de2ec014b2da69cf
+  validateVideoText ::
+    GHC.Base.String -> Main.FormValidation Main.VideoText
+  {- Arity: 1, Strictness: <S,1*U>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ (str :: GHC.Base.String) ->
+                 case str of wild {
+                   [] -> Main.formValidation1
+                   : ds1 ds2
+                   -> Data.Validation.Success
+                        @ (GHC.Base.NonEmpty Main.Error)
+                        @ Main.VideoText
+                        wild `cast` (Sym (Main.N:VideoText[0])) }) -}
+d2e82782a55d23cbd62661a9cf9e9bed
+  validateVideoUrl ::
+    GHC.Base.String -> Main.FormValidation Main.VideoUrl
+  {- Arity: 1, Strictness: <L,U>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ (str :: GHC.Base.String) ->
+                 case Main.isUrl Main.InvalidVideoUrl str of wild {
+                   Data.Validation.Failure e
+                   -> Data.Validation.Failure
+                        @ (GHC.Base.NonEmpty Main.Error)
+                        @ Main.VideoUrl
+                        e
+                   Data.Validation.Success a1
+                   -> Data.Validation.Success
+                        @ (GHC.Base.NonEmpty Main.Error)
+                        @ Main.VideoUrl
+                        a1 `cast` (Sym (Main.N:VideoUrl[0])) }) -}
+instance GHC.Show.Show [Main.Error] = Main.$fShowError
+instance GHC.Show.Show [Main.Image] = Main.$fShowImage
+instance GHC.Show.Show [Main.ImageUrl] = Main.$fShowImageUrl
+instance GHC.Show.Show [Main.Media] = Main.$fShowMedia
+instance GHC.Show.Show [Main.MediaType] = Main.$fShowMediaType
+instance GHC.Show.Show [Main.MediaUpload] = Main.$fShowMediaUpload
+instance GHC.Show.Show [Main.UnvalidatedForm]
+  = Main.$fShowUnvalidatedForm
+instance GHC.Show.Show [Main.Username] = Main.$fShowUsername
+instance GHC.Show.Show [Main.Video] = Main.$fShowVideo
+instance GHC.Show.Show [Main.VideoText] = Main.$fShowVideoText
+instance GHC.Show.Show [Main.VideoUrl] = Main.$fShowVideoUrl
+trusted: none
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

@@ -1,0 +1,23 @@
+{
+  "visitId": "1560876457",
+  "visitStartTime": 1560876457,
+  "hits": [
+    {
+      "hitNumber": "135",
+      "time": 4886016,
+      "hour": "11",
+      "minute": "51",
+      "product": [
+        {
+          "productQuantity": 1,
+          "productPrice": 1099000000
+        }
+      ],
+      "eCommerceAction": {
+        "action_type": "3",
+        "step": "1"
+      },
+      "type": "EVENT"
+    }
+  ]
+}

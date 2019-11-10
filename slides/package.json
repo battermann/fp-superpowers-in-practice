@@ -1,0 +1,16 @@
+{
+  "name": "lambda_cologne",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "webaudiofont": "^2.5.48"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
