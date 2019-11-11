@@ -26,9 +26,9 @@ Leif Battermann - [@leifbattermann](https://twitter.com/leifbattermann)
 
 |     |     |
 | --- | --- |
-| Functors | <span style="color:lightblue">#Music</span> |
-| Monoids | <span style="color:lightblue">#DataAnalysis</span> <span style="color:lightblue">#ECommerce</span> |
-| Applicatives | <span style="color:lightblue">#FormsValidation</span> |
+| <span style="color:lightblue">Functors</span> |#Music |
+| <span style="color:lightblue">Monoids</span> | #DataAnalysis #ECommerce |
+| <span style="color:lightblue">Applicatives</span> | #FormsValidation |
 
 notes:
 
@@ -603,6 +603,37 @@ data UnvalidatedForm = UnvalidatedForm
 ---
 
 <!-- .slide: data-background="./images/meme.png" data-background-opacity="1" data-background-size="contain"-->
+
+---
+
+## Applicatives
+
+<span style="color:lightblue">Functor</span>: Apply unary function to one value
+|fr1
+
+```bash
+λ> (+ 1) <$> Just 5
+Just 6
+```
+|fr1
+
+<span style="color:lightblue">Applicative</span>: Apply n-ary function to n values
+|fr2
+
+```bash
+λ> pure (+) <*> Just 5 <*> Just 5
+Just 10
+```
+|fr2
+
+Which is the same as
+|fr3
+
+```bash
+λ> (+) <$> Just 5 <*> Just 5
+Just 10
+```
+|fr3
 
 ---
 
