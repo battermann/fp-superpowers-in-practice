@@ -325,6 +325,33 @@ data AddToCartRate = AddToCartRate
 
 ## Monoids
 
+<span style="color:lightblue">Monoid</span> instances for Int
+
+```bash
+λ> Sum 5 <> Sum 5
+Sum {getSum = 10}
+
+λ> Product 4 <> Product 4
+Product {getProduct = 16}
+
+λ> Max 1 <> Max 10
+Max {getMax = 10}
+```
+|fr
+
+```bash
+λ> foldl (<>) mempty  [Sum 5, Sum 5]
+Sum {getSum = 10}
+
+λ> foldl (<>) mempty  (Product <$> [1, 2, 3])
+Product {getProduct = 6}
+```
+|fr
+
+---
+
+## Monoids
+
 Deriving a <span style="color:lightblue">monoid</span> instance
 
 ```haskell
@@ -333,7 +360,10 @@ data AddToCartRate = AddToCartRate
   , numA2cEvents :: Sum Int
   , numSessionsWithA2cEvents :: Sum Int
   } deriving (Generic, Show)
+````
+|fr
 
+```haskell
 instance Semigroup AddToCartRate where
   (<>) = mappenddefault
 
@@ -374,9 +404,10 @@ main = do
   let result         = foldl (<>) mempty addToCartRates
   pPrint result
 ```
+|fr1
 
 Or using `foldMap`
-|fr1
+|fr2
 
 ```haskell
 main :: IO ()
@@ -385,7 +416,7 @@ main = do
   let result = foldMap fromSession sessions
   pPrint result
 ```
-|fr1
+|fr2
 
 ---
 
