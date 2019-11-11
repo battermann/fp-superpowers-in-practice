@@ -809,7 +809,7 @@ formValidation form =
  let media = case validateMediaType (mediaType form) of
       Success TypeImage -> validateImage (imageUrl form)
       Success TypeVideo -> validateVideo (videoUrl form) (videoText form)
-      Failure e -> Failure e
+      Failure e         -> Failure e
  in  MediaUpload <$> validateUsername (username form) <*> media
 ```  
 |fr
